@@ -1,39 +1,23 @@
 (() => {
-	console.log('js is ok')
-	// set up the puzzle pieces and boards
-	// 
-	//document.querySelector('h1').textContent = 'bonjour' (this changes the text)
+	console.log('js')
 	
-	//function changeHeadline() {
-	//	document.querySelector('h1').textContent = 'bonjour';
-	//	document.querySelector('p').textContent = 'oh no you dingus!yall just got CLICKED';
-	//}
-		
-
-	//const theButton = document.querySelector('#buttonHolder img', changeHeadline) //this targets 'theButton' ID and links it to the function
-
-
-	//theButton.addEventListener('click', changeHeadline); //plays function fter 'loading page' or after event listener happens
-
 
 	const thePieces = ['topLeft', 'topRight', 'bottomLeft', 'bottomRight'];
-	//'pieces' = 4 images of large picture
 	
 
 	let piecesBoard = document.querySelector('.puzzle-pieces');
-	let puzzleBoard = document.querySelector('.puzzleBoard');
+	let puzzleBoard = document.querySelector('.puzzle-board');
 
 	let puzzleSelectors = document.querySelectorAll('#buttonHolder img')
 
 	function createPuzzlePiece(pictureIndex) {
-		//add images here!
-		//debugger;
-		//
+		
+
 		thePieces.forEach((piece, index) => {//******fix this
 			let newPuzzlePiece = `<img id="piece${index}" class="puzzle-image" src="images/${piece + pictureIndex}.jpg" alt="puzzle piece">`;
 
 			piecesBoard.innerHTML += newPuzzlePiece;
-			//debugger;
+			
 		});
 
 	}
