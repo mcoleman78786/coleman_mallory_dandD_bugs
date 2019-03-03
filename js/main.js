@@ -13,7 +13,7 @@
 	function createPuzzlePiece(pictureIndex) {
 		
 
-		thePieces.forEach((piece, index) => {//******fix this
+		thePieces.forEach((piece, index) => {
 			let newPuzzlePiece = `<img id="piece${index}" class="puzzle-image" src="images/${piece + pictureIndex}.jpg" alt="puzzle piece">`;
 
 			piecesBoard.innerHTML += newPuzzlePiece;
@@ -23,14 +23,12 @@
 	}
 
 	function resetPuzzlePieces() {
-		//reset puzzle
-		//debugger;
-		piecesBoar.innerHTML = "";
+
+		piecesBoard.innerHTML = "";
 
 		createPuzzlePiece(this.dataset.puzzleref)
 	}
 
-	//event handling goes here
 	puzzleSelectors.forEach(button => button.addEventListener('click', resetPuzzlePieces));
 
 	createPuzzlePiece(0);
