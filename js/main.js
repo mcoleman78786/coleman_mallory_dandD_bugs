@@ -32,4 +32,6 @@
 	puzzleSelectors.forEach(button => button.addEventListener('click', resetPuzzlePieces));
 
 	createPuzzlePiece(0);
+
+	
 })();
